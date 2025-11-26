@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 힐링송 소개</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header class="header">
+        <div class="header-content">
+            <h1>🎵 나만의 힐링송 소개</h1>
+            <p>계절의 색감으로 물드는 내 마음 이야기</p>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <!-- 🌸 봄 섹션 -->
+        <section class="season spring-season">
+            <div class="season-header">
+                <h2>🌸 봄 - 새로움과 성장</h2>
+                <p class="season-description">미숙함, 어색함과 새로움</p>
+            </div>
+
+            <!-- 봄 - 첫 번째 곡 -->
+            <article class="song-card spring-card">
+                <div class="card-header">
+                    <h3>나의 사춘기에게</h3>
+                    <p class="artist">볼빨간사춘기</p>
+                </div>
+                
+                <div class="card-content">
+                    <div class="song-image">
+                        <img src="나의 사춘기에게.jpg" alt="나의 사춘기에게">
+                    </div>
+                    
+                    <div class="song-info">
+                        <div class="info-section">
+                            <h4>노래 소개</h4>
+                            <!-- 여기에 노래 소개를 입력하세요 -->
+                            <p>과거의 고통과 아픔을 회상하며 성장의 이야기를 담은 곡입니다. 감정적 깊이와 함께 새로운 시작을 응원하는 메시지를 전달합니다.</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>내 생각</h4>
+                            <!-- 여기에 노래에 대한 본인의 이야기를 입력하세요 -->
+                            <p>[이 곡을 좋아하는 이유와 기억을 여기에 적어주세요]</p>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=Xd3-WLK8hiw" target="_blank" class="youtube-link">YouTube에서 보기</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 봄 - 두 번째 곡 -->
+            <article class="song-card spring-card">
+                <div class="card-header">
+                    <h3>Give Love</h3>
+                    <p class="artist">악동뮤지션</p>
+                </div>
+                
+                <div class="card-content">
+                    <div class="song-image">
+                        <img src="give love.jpg" alt="Give Love">
+                    </div>
+                    
+                    <div class="song-info">
+                        <div class="info-section">
+                            <h4>노래 소개</h4>
+                            <!-- 여기에 노래 소개를 입력하세요 -->
+                            <p>사랑의 감정을 솔직하게 표현하는 곡으로, 봄의 따뜻함과 다시 피어나는 감정의 신선함을 나타냅니다.</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>내 생각</h4>
+                            <!-- 여기에 노래에 대한 본인의 이야기를 입력하세요 -->
+                            <p>[이 곡을 좋아하는 이유와 기억을 여기에 적어주세요]</p>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=x2XX3cNW4K0" target="_blank" class="youtube-link">YouTube에서 보기</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- 🌞 여름 섹션 -->
+        <section class="season summer-season">
+            <div class="season-header">
+                <h2>🌞 여름 - 활기와 일상</h2>
+                <p class="season-description">일년의 중간, 가장 긴 시간 > 일상과 연결 / 일상의 안정</p>
+            </div>
+
+            <!-- 여름 - 첫 번째 곡 -->
+            <article class="song-card summer-card">
+                <div class="card-header">
+                    <h3>BBUU!</h3>
+                    <p class="artist">PLAVE</p>
+                </div>
+                
+                <div class="card-content">
+                    <div class="song-image">
+                        <img src="bbuu.jpg" alt="BBUU!">
+                    </div>
+                    
+                    <div class="song-info">
+                        <div class="info-section">
+                            <h4>노래 소개</h4>
+                            <!-- 여기에 노래 소개를 입력하세요 -->
+                            <p>두근거리는 설렘과 밝고 경쾌한 분위기의 사랑 노래입니다. 우주적 감정과 설렘으로 가득한 여름의 밝은 기운을 담고 있습니다.</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>내 생각</h4>
+                            <!-- 여기에 노래에 대한 본인의 이야기를 입력하세요 -->
+                            <p>[이 곡을 좋아하는 이유와 기억을 여기에 적어주세요]</p>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=8L001YT4k6k" target="_blank" class="youtube-link">YouTube에서 보기</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 여름 - 두 번째 곡 -->
+            <article class="song-card summer-card">
+                <div class="card-header">
+                    <h3>Every Day Good Day</h3>
+                    <p class="artist">SOLE Feat. BIG Naughty</p>
+                </div>
+                
+                <div class="card-content">
+                    <div class="song-image">
+                        <img src="every day good day.jpg" alt="Every Day Good Day">
+                    </div>
+                    
+                    <div class="song-info">
+                        <div class="info-section">
+                            <h4>노래 소개</h4>
+                            <!-- 여기에 노래 소개를 입력하세요 -->
+                            <p>새로운 시작과 긍정적인 에너지를 담은 노래로, 여름의 신선함과 일상 속 희망이 담겨 있습니다.</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>내 생각</h4>
+                            <!-- 여기에 노래에 대한 본인의 이야기를 입력하세요 -->
+                            <p>[이 곡을 좋아하는 이유와 기억을 여기에 적어주세요]</p>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=_ngjXGKNa4s" target="_blank" class="youtube-link">YouTube에서 보기</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- 🍂 가을 섹션 -->
+        <section class="season autumn-season">
+            <div class="season-header">
+                <h2>🍂 가을 - 감성과 회상</h2>
+                <p class="season-description">과거에 대한 회상, 감성</p>
+            </div>
+
+            <!-- 가을 - 첫 번째 곡 -->
+            <article class="song-card autumn-card">
+                <div class="card-header">
+                    <h3>반짝 빛나던, 나의 2006년</h3>
+                    <p class="artist">적재</p>
+                </div>
+                
+                <div class="card-content">
+                    <div class="song-image">
+                        <img src="2006년.jpg" alt="반짝 빛나던, 나의 2006년">
+                    </div>
+                    
+                    <div class="song-info">
+                        <div class="info-section">
+                            <h4>노래 소개</h4>
+                            <!-- 여기에 노래 소개를 입력하세요 -->
+                            <p>지난 시간을 그리워하고 추억하는 감정이 주된 곡입니다. 시간의 흐름 속에서 사라져가는 무언가를 아파하는 가을의 낙엽 같은 감정을 표현합니다.</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>내 생각</h4>
+                            <!-- 여기에 노래에 대한 본인의 이야기를 입력하세요 -->
+                            <p>[이 곡을 좋아하는 이유와 기억을 여기에 적어주세요]</p>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=67i2zCI4G14" target="_blank" class="youtube-link">YouTube에서 보기</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 가을 - 두 번째 곡 -->
+            <article class="song-card autumn-card">
+                <div class="card-header">
+                    <h3>날씨의 요정</h3>
+                    <p class="artist">신인류</p>
+                </div>
+                
+                <div class="card-content">
+                    <div class="song-image">
+                        <img src="날씨의 요정.jpg" alt="날씨의 요정">
+                    </div>
+                    
+                    <div class="song-info">
+                        <div class="info-section">
+                            <h4>노래 소개</h4>
+                            <!-- 여기에 노래 소개를 입력하세요 -->
+                            <p>햇살과 무지개, 비와 같은 자연의 변화를 통해 감정을 표현합니다. 날씨 변화로 표현되는 감정의 다채로움이 가을의 변덕스러운 날씨와 잘 맞습니다.</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>내 생각</h4>
+                            <!-- 여기에 노래에 대한 본인의 이야기를 입력하세요 -->
+                            <p>[이 곡을 좋아하는 이유와 기억을 여기에 적어주세요]</p>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=hRedtfUI9j0" target="_blank" class="youtube-link">YouTube에서 보기</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ❄️ 겨울 섹션 -->
+        <section class="season winter-season">
+            <div class="season-header">
+                <h2>❄️ 겨울 - 위로와 고요</h2>
+                <p class="season-description">유난히 길었던 겨울, 스스로에 대한 위로</p>
+            </div>
+
+            <!-- 겨울 - 첫 번째 곡 -->
+            <article class="song-card winter-card">
+                <div class="card-header">
+                    <h3>오랜 날 오랜 밤</h3>
+                    <p class="artist">악동뮤지션</p>
+                </div>
+                
+                <div class="card-content">
+                    <div class="song-image">
+                        <img src="오랜날오랜밤.jpg" alt="오랜 날 오랜 밤">
+                    </div>
+                    
+                    <div class="song-info">
+                        <div class="info-section">
+                            <h4>노래 소개</h4>
+                            <!-- 여기에 노래 소개를 입력하세요 -->
+                            <p>이별과 그리움, 사랑하지만 헤어져야 하는 복잡한 감정을 담은 곡입니다. 겨울밤의 어둠과 별, 그리운 마음이 어우러지는 감성적인 겨울 분위기를 완벽하게 담아냅니다.</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>내 생각</h4>
+                            <!-- 여기에 노래에 대한 본인의 이야기를 입력하세요 -->
+                            <p>[이 곡을 좋아하는 이유와 기억을 여기에 적어주세요]</p>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=wEQpfil0IYA" target="_blank" class="youtube-link">YouTube에서 보기</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 겨울 - 두 번째 곡 -->
+            <article class="song-card winter-card">
+                <div class="card-header">
+                    <h3>Let It Be</h3>
+                    <p class="artist">The Beatles</p>
+                </div>
+                
+                <div class="card-content">
+                    <div class="song-image">
+                        <img src="let it be.jpg" alt="Let It Be">
+                    </div>
+                    
+                    <div class="song-info">
+                        <div class="info-section">
+                            <h4>노래 소개</h4>
+                            <!-- 여기에 노래 소개를 입력하세요 -->
+                            <p>수용과 평온함, 어려운 시간 속에서도 희망을 잃지 않는 메시지를 담고 있습니다. 겨울의 고요함과 따뜻한 위로의 감정이 어우러집니다.</p>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>내 생각</h4>
+                            <!-- 여기에 노래에 대한 본인의 이야기를 입력하세요 -->
+                            <p>[이 곡을 좋아하는 이유와 기억을 여기에 적어주세요]</p>
+                        </div>
+                        
+                        <a href="https://www.youtube.com/watch?v=CGj85pVzRJs" target="_blank" class="youtube-link">YouTube에서 보기</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- 푸터 영역 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 나만의 힐링송 소개</p>
+            <p>Contact: <a href="mailto:sjin0507@hanyang.ac.kr">sjin0507@hanyang.ac.kr</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
