@@ -1,0 +1,468 @@
+:root {
+  --spring-color: #ffd6e8;
+  --spring-bg: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80');
+  
+  --summer-color: #c2e5ff;
+  --summer-bg: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
+  
+  --autumn-color: #ffe4b5;
+  --autumn-bg: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
+  
+  --winter-color: #e0f4ff;
+  --winter-bg: url('https://images.unsplash.com/photo-1519681393-2de5e3f8b72b?auto=format&fit=crop&w=1200&q=80');
+  
+  --main-font: 'Noto Sans KR', 'Arial', sans-serif;
+  --card-radius: 14px;
+  --card-shadow: 0 4px 24px rgba(30, 30, 70, 0.08);
+  --transition-fast: 0.25s cubic-bezier(0.42, 0, 0.46, 1.13);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  background: #f8f8fb;
+  color: #282828;
+}
+
+/* ===== 메인 페이지 스타일 ===== */
+body.main-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  padding: 48px 0 32px 0;
+  background: linear-gradient(135deg, #f8f8fb 0%, #eef4ff 100%);
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(100, 100, 150, 0.1);
+}
+
+.main-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.main-header p {
+  font-size: 1.1rem;
+  color: #8a8aad;
+}
+
+.season-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 40px 30px;
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.season-tile {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(60, 60, 100, 0.15);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.3s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.season-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(60, 60, 100, 0.25);
+}
+
+.season-tile.spring-tile {
+  background: var(--spring-bg) center/cover, linear-gradient(135deg, #ffc0cb 0%, #ffb6d9 100%);
+}
+
+.season-tile.summer-tile {
+  background: var(--summer-bg) center/cover, linear-gradient(135deg, #87ceeb 0%, #4a90e2 100%);
+}
+
+.season-tile.autumn-tile {
+  background: var(--autumn-bg) center/cover, linear-gradient(135deg, #ff8c42 0%, #d4724f 100%);
+}
+
+.season-tile.winter-tile {
+  background: var(--winter-bg) center/cover, linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+}
+
+.tile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease;
+}
+
+.season-tile:hover .tile-overlay {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.tile-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tile-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.tile-desc {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  opacity: 0.95;
+}
+
+.tile-theme {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+
+.tile-icon {
+  position: absolute;
+  font-size: 3.5rem;
+  top: 20px;
+  right: 20px;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+.season-tile:hover .tile-icon {
+  transform: scale(1.15) rotate(10deg);
+}
+
+/* ===== 상세 페이지 스타일 ===== */
+body.detail-page {
+  background: #f8f8fb;
+}
+
+.detail-header {
+  padding: 28px 40px;
+  background: linear-gradient(135deg, #f8f8fb 0%, #eef4ff 100%);
+  box-shadow: 0 2px 12px rgba(100, 100, 150, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.detail-header h1 {
+  font-size: 1.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.detail-header p {
+  position: absolute;
+  bottom: 8px;
+  right: 40px;
+  font-size: 0.9rem;
+  color: #8a8aad;
+}
+
+.detail-main {
+  padding: 40px 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.season-detail {
+  border-radius: 20px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 24px rgba(60, 60, 100, 0.1);
+}
+
+.season-detail.spring {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 192, 203, 0.15) 100%);
+}
+
+.season-detail.summer {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(135, 206, 235, 0.15) 100%);
+}
+
+.season-detail.autumn {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 140, 66, 0.15) 100%);
+}
+
+.season-detail.winter {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(179, 229, 252, 0.15) 100%);
+}
+
+.cards {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 노래 카드 */
+.song-card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 18px;
+  width: 340px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.song-card:focus-within,
+.song-card:focus {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 6px 24px 2px #eee3ff;
+  border: 2px solid #a2c8f5;
+}
+
+.song-card:hover {
+  transform: translateY(-3px);
+}
+
+.song-card img {
+  width: 90%;
+  min-height: 110px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 18px #e0e0f4aa;
+  object-fit: cover;
+}
+
+.card-info {
+  width: 100%;
+  text-align: center;
+}
+
+.card-info h3 {
+  font-size: 1.12rem;
+  margin: 6px 0;
+  font-weight: bold;
+}
+
+.card-info blockquote {
+  font-style: italic;
+  margin: 6px 0 10px 0;
+  color: #8685cc;
+  background: #f5f6fb;
+  padding: 6px 12px;
+  border-left: 4px solid #b7aecf;
+  border-radius: 7px;
+  font-size: 0.95rem;
+}
+
+.card-info .my-comment {
+  font-size: 0.97rem;
+  color: #28285b;
+  background: #e7ecfa9c;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 7px 0 4px 0;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background: linear-gradient(92deg, #f7d6fb 30%, #c2e5ff 86%);
+  color: #3b3478;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 7px 18px;
+  margin: 9px 0 3px 0;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #e4e4f066;
+  transition: background 0.16s, box-shadow 0.2s;
+}
+
+.toggle-btn:hover,
+.toggle-btn:focus {
+  background: linear-gradient(90deg, #efc0ff 28%, #90e1fa 91%);
+  box-shadow: 0 4px 12px #b1f2ed7a;
+}
+
+.card-detail {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(10px) scaleY(0.99);
+  transition: all 0.32s cubic-bezier(0.27, 1.12, 0.52, 1.09);
+  pointer-events: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.card-detail.open {
+  max-height: 420px;
+  opacity: 1;
+  transform: translateY(0) scaleY(1.02);
+  pointer-events: auto;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.card-detail iframe {
+  width: 96%;
+  height: 164px;
+  border: none;
+  border-radius: 9px;
+  display: block;
+  margin: 3px auto 9px auto;
+  box-shadow: 0 2px 10px #73a4ff1b;
+}
+
+.card-detail p {
+  font-size: 0.97rem;
+  color: #3c3364;
+  background: #f1f3fa;
+  padding: 7px 12px;
+  border-radius: 6px;
+  margin: 0;
+}
+
+/* 반응형 설정 */
+@media (max-width: 1200px) {
+  .season-grid {
+    gap: 16px;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .season-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .detail-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .detail-header h1 {
+    margin-left: 0;
+    margin-right: 0;
+    order: 2;
+  }
+
+  .detail-header p {
+    position: static;
+    order: 3;
+  }
+
+  .back-btn {
+    order: 1;
+    align-self: flex-start;
+  }
+
+  .cards {
+    width: 95%;
+    gap: 18px;
+  }
+
+  .song-card {
+    width: 98vw;
+    min-width: 240px;
+    max-width: 96vw;
+  }
+}
+
+@media (max-width: 620px) {
+  .main-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .season-tile h2 {
+    font-size: 1.8rem;
+  }
+
+  .detail-header {
+    padding: 16px 20px;
+  }
+
+  .season-grid {
+    gap: 12px;
+    padding: 20px 10px;
+  }
+
+  .detail-main {
+    padding: 20px 10px;
+  }
+
+  .season-detail {
+    padding: 16px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .song-card {
+    width: 97vw;
+  }
+}
